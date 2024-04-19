@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Circulate activate",
+    "sk": "Cirkulacacia aktivna"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "uiComponent": "sensor",
+  "icon": "/assets/pump.svg"
+}

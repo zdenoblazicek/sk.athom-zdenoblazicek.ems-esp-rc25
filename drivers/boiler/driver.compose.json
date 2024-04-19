@@ -1,0 +1,84 @@
+{
+  "name": {
+    "en": "Boiler"
+  },
+  "class": "heater",
+  "capabilities": [
+    "boiler_curflowtemp",
+    "boiler_heatingtemp",
+    "boiler_wwseltemp",
+    "boiler_wwcirc",
+    "boiler_outdoortemp",
+    "boiler_wwcurtemp",
+  
+    "boiler_wwcircmode",
+    "boiler_pumpmode",
+    "boiler_wwcurtemp2",
+    "boiler_lastcode",
+
+    "target_temperature.water",
+    "measure_temperature.water",
+    "target_temperature.heatingtemp",
+    "measure_temperature.heatingtemp",
+    
+    "boiler_wwcirc_change"
+  ],
+
+  "capabilitiesOptions": {
+    "target_temperature.water": {
+      "maintenanceAction": true,
+      "title": { "en": "water temperature" },
+      "desc": { "en": "Water temperature" },
+      "insights": false,
+      "max": 60,
+      "min": 30,
+      "step": 1
+
+    },
+    "target_temperature.heatingtemp": {
+      "maintenanceAction": true,
+      "title": { "en": "radiator temperature" },
+      "desc": { "en": "radiator temperature" },
+      "insights": false,
+      "max": 45,
+      "min": 10,
+      "step": 1
+    },
+    "measure_temperature.water" : {
+      "maintenanceAction": true,
+      "title": { "en": "water measure" },
+      "desc": { "en": "Water measure" },
+      "insights": false
+    },
+    "measure_temperature.heatingtemp" : {
+      "maintenanceAction": true,
+      "title": { "en": "heatingtemp measure" },
+      "desc": { "en": "heatingtemp measure" },
+      "insights": false
+    }
+  },
+  
+  "platforms": ["local"],
+  "connectivity": ["lan"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "pair",
+      "navigation": { "next": "list_devices" }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" },
+      "options": { "singular": true }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Pixodesk SVG (https://pixodesk.com) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:pixodesk="https://pixodesk.com" viewBox="0 0 800 800" text-rendering="geometricPrecision" shape-rendering="geometricPrecision">
+  <g id="Wheel">
+    <g transform="translate(180.072, 200.994)scale(0.4383, 0.4383)">
+      <ellipse fill="none" stroke="#000000" stroke-width="68.45" cx="305.137" cy="454.073" rx="213.305" ry="213.305"/>
+    </g>
+    <g transform="translate(228.511, 818.885)rotate(-90)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(408.881, -18.8851)rotate(90)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(-105.081, 304.924)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(732.689, 495.076)rotate(180)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(-42.7036, 635.885)rotate(-45)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(677.23, 171.033)rotate(135)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(84.8371, 36.5743)rotate(45)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+    <g transform="translate(542.772, 763.426)rotate(-135)scale(0.8694, 0.8593)">
+      <path fill="none" stroke="#000000" stroke-width="23.14" d="M589.321,110.638C589.321,82.693,612.009,60.004,639.954,60.004C667.9,60.004,690.588,82.693,690.588,110.638"/>
+    </g>
+  </g>
+  <g id="Cover">
+    <g transform="translate(-302.002, -0.7465)scale(0.9698, 0.9721)">
+      <rect fill="none" stroke="#000000" stroke-width="25.75" x="374.969" y="80.835" width="206.226" height="51.436"/>
+    </g>
+    <g transform="translate(8.6678, -54.0735)">
+      <ellipse fill="none" stroke="#000000" stroke-width="30" cx="305.137" cy="454.073" rx="213.305" ry="213.305"/>
+    </g>
+    <g transform="translate(1.3398, 593.59)scale(0.9698, 0.9721)">
+      <rect fill="none" stroke="#000000" stroke-width="25.75" x="374.969" y="80.835" width="206.226" height="51.436"/>
+    </g>
+    <g transform="translate(-86.1956, -17.59)scale(1, 1.044)">
+      <path fill="none" stroke="#000000" stroke-width="29.35" d="M186.695,400L186.695,139.296L186.695,400z"/>
+    </g>
+    <g transform="translate(340.414, 254.578)scale(1, 1.044)">
+      <path fill="none" stroke="#000000" stroke-width="29.35" d="M186.695,400L186.695,139.296L186.695,400z"/>
+    </g>
+    <g transform="translate(33.6243, 84.0112)scale(1, 0.3146)">
+      <path fill="none" stroke="#000000" stroke-width="40.47" d="M186.695,139.296L186.695,394.925L186.695,139.296z"/>
+    </g>
+    <g transform="translate(220.594, 550.782)scale(1, 0.3035)">
+      <path fill="none" stroke="#000000" stroke-width="40.6" d="M186.695,400L186.695,139.296L186.695,400z"/>
+    </g>
+  </g>
+</svg>

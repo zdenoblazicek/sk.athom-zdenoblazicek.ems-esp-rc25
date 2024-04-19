@@ -1,0 +1,30 @@
+{
+    "type": "enum",
+    "title": {
+        "en": "hc1 mode"
+    },
+    "values": [
+        {
+            "id": "auto",
+            "title": "Auto",
+            "hint":  "AUTO",
+            "desc":  "AUto"
+        },
+        {
+            "id": "night",
+            "title":"Night"
+        },
+        {
+            "id": "day",
+            "title": "Day"
+        }
+    ],
+    "getable": true,
+    "setable": true,
+    "uiComponent": "picker",
+
+    "set": {
+        "method": "setHc1Mode"
+      }
+}
+

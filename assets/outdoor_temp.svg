@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Pixodesk SVG (https://pixodesk.com) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:pixodesk="https://pixodesk.com" viewBox="0 0 800 800" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" fill="#007fff" stroke="#007fff">
+  <g transform="translate(338.4319, 212.192)translate(-338.4319, -212.192)">
+    <path fill="#007fff" stroke="#003a73" transform="translate(266.5253, 58.1064)" d="M0,0L143.1907,70.3502L144.4358,102.1012L-0.6226,32.9961L-0.6226,23.6576L138.2101,91.5175L136.965,76.5759L-0.3774,9.9611L0,0z"/>
+    <path fill="#007fff" stroke="#003a73" transform="translate(388.1712, 149.6239)" d="M0,0L3.7354,216.6537L-108.9494,215.4086L-109.572,206.0701L-4.358,209.1829L-8.0934,-4.9805L0,0z"/>
+  </g>
+  <g transform="translate(492.7627, 266.3553)translate(-492.7627, -266.3553)">
+    <ellipse fill="#007fff" stroke="#003a73" transform="translate(492.7627, 325.8107)" rx="34.2412" ry="33.6187"/>
+    <ellipse fill="#000000" stroke="#003a73" transform="translate(496.7432, 330.7251)" cx="-3.7354" cy="-4.4099" rx="27.393" ry="26.511"/>
+    <ellipse fill="#007fff" stroke="#003a73" transform="translate(489.0266, 190.0902)scale(0.5, 0.5)" rx="34.241" ry="33.618"/>
+    <ellipse fill="#000000" stroke="#003a73" transform="translate(489.026, 190.09)scale(0.3, 0.3)" rx="34.241" ry="33.618"/>
+    <path fill="#007fff" stroke="#007fff" transform="translate(472.4631, 191.2321)" d="M0,0L1.6226,108.9494L8.716,108.9494L6.8482,5.6031L0,0z"/>
+    <path fill="#007fff" stroke="#007fff" transform="translate(501.7232, 190.232)scale(-1, 1)translate(-4.3575, 0)" d="M0,0L1.622,108.949L8.715,108.949L6.848,5.603L0,0z"/>
+    <rect fill="#000000" stroke="#000000" transform="translate(489.6498, 252.5551)translate(-9.3385, -61.9455)" width="18.677" height="123.8911"/>
+  </g>
+  <ellipse fill="#f12020" stroke="#000000" transform="translate(492.6109, 326.8003)" rx="16.1868" ry="15.5642"/>
+  <path fill="#f12020" stroke="#f12020" transform="translate(484.2919, 197.345)" d="M0,0L3.1128,115.7977L12.4514,117.0428L8.716,0L0,0z"/>
+  <rect fill="#000000" stroke="#007fff" stroke-width="7" transform="translate(307.8599, 225.1621)translate(-36.7315, -56.965)" width="73.4631" height="113.93"/>
+  <path fill="#007fff" stroke="#007fff" stroke-width="5" transform="translate(507.4591, 210.5318)" d="M0,0L13.6965,0L15.5642,1.2451"/>
+  <path fill="#007fff" stroke="#007fff" stroke-width="5" transform="translate(507.7042, 227.9629)" d="M0,0L13.696,0L15.564,1.245"/>
+</svg>

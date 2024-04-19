@@ -1,0 +1,75 @@
+{
+  "name": {
+    "en": "Thermostat"
+  },
+  "class": "thermostat",
+  "capabilities": [
+    "target_temperature",
+    "measure_temperature",
+    
+    "target_temperature.nighttemp",
+    "measure_temperature.nighttemp",
+    "target_temperature.daytemp",
+    "measure_temperature.daytemp",
+  
+
+    "thermostat_hc1_daytemp",
+    "thermostat_hc1_nighttemp",
+    
+    "thermostat_hc1_program",
+    "thermostat_hc1_mode"
+    
+  ],
+  
+  "capabilitiesOptions": {
+    "target_temperature.nighttemp": {
+      "maintenanceAction": true,
+      "title": { "en": "Night" },
+      "desc": { "en": "Night" },
+      "insights": false
+    },
+    "measure_temperature.nighttemp": {
+      "maintenanceAction": true,
+      "title": { "en": "Night measure" },
+      "desc": { "en": "Night measure" },
+      "insights": false,
+      "visible": false
+    },
+    "target_temperature.daytemp": {
+      "maintenanceAction": true,
+      "title": { "en": "Day" },
+      "desc": { "en": "Day" },
+      "insights": false
+    },
+    "measure_temperature.daytemp": {
+      "maintenanceAction": true,
+      "title": { "en": "day measure" },
+      "desc": { "en": "day measure" },
+      "insights": false
+    }
+  },
+
+  "platforms": ["local"],
+  "connectivity": ["lan"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "pair",
+      "navigation": { "next": "list_devices" }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" },
+      "options": { "singular": true }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Circulate activate",
+    "sk": "Cirkulacacia aktivna"
+  },
+  "getable": true,
+  "setable": true,
+  "insights": true,
+  "insightsTitleTrue":  "on" ,
+  "insightsTitleFalse": "off" ,
+  "titleTrue":  "on",
+  "titleFalse": "off",
+  "capabilities": ["onoff"],
+  "uiQuickAction": true,
+  "icon": "/assets/pump.svg"
+}

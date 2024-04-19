@@ -1,0 +1,968 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "sk.athom-zdenoblazicek.ems-esp",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "EMS-ESP"
+  },
+  "description": {
+    "en": "Adds support for EMS-ESP devices. Change project from https://github.com/angas/se.assermark.ems-esp"
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Zdeno Blazicek",
+    "email": "zdeno.blazicek@gmail.com"
+  },
+  "brandColor": "#375f92",
+  "drivers": [
+    {
+      "name": {
+        "en": "Boiler"
+      },
+      "class": "heater",
+      "capabilities": [
+        "boiler_curflowtemp",
+        "boiler_heatingtemp",
+        "boiler_wwseltemp",
+        "boiler_wwcirc",
+        "boiler_outdoortemp",
+        "boiler_wwcurtemp",
+        "boiler_wwcircmode",
+        "boiler_pumpmode",
+        "boiler_wwcurtemp2",
+        "boiler_lastcode",
+        "target_temperature.water",
+        "measure_temperature.water",
+        "target_temperature.heatingtemp",
+        "measure_temperature.heatingtemp",
+        "boiler_wwcirc_change"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature.water": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "water temperature"
+          },
+          "desc": {
+            "en": "Water temperature"
+          },
+          "insights": false,
+          "max": 60,
+          "min": 30,
+          "step": 1
+        },
+        "target_temperature.heatingtemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "radiator temperature"
+          },
+          "desc": {
+            "en": "radiator temperature"
+          },
+          "insights": false,
+          "max": 45,
+          "min": 10,
+          "step": 1
+        },
+        "measure_temperature.water": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "water measure"
+          },
+          "desc": {
+            "en": "Water measure"
+          },
+          "insights": false
+        },
+        "measure_temperature.heatingtemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "heatingtemp measure"
+          },
+          "desc": {
+            "en": "heatingtemp measure"
+          },
+          "insights": false
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/boiler/assets/images/small.png",
+        "large": "/drivers/boiler/assets/images/large.png",
+        "xlarge": "/drivers/boiler/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "pair",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "boiler",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Server Settings",
+            "sv": "Serverinställningar"
+          },
+          "children": [
+            {
+              "id": "network_address",
+              "type": "text",
+              "label": {
+                "en": "Network Adddress",
+                "sv": "Network Adddress"
+              },
+              "value": "ems-esp.local"
+            },
+            {
+              "id": "access_token",
+              "type": "text",
+              "label": {
+                "en": "Access Token",
+                "sv": "Access Token"
+              },
+              "hint": {
+                "en": "Found in EMS-ESP web interface, under Security and Manage Users",
+                "sv": "Finns i EMS-ESP webb gränssnitt, under Säkerhet och Användare"
+              },
+              "value": ""
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll intervall in ms",
+                "sv": "Poll intervall i ms"
+              },
+              "value": 10000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Thermostat"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature",
+        "target_temperature.nighttemp",
+        "measure_temperature.nighttemp",
+        "target_temperature.daytemp",
+        "measure_temperature.daytemp",
+        "thermostat_hc1_daytemp",
+        "thermostat_hc1_nighttemp",
+        "thermostat_hc1_program",
+        "thermostat_hc1_mode"
+      ],
+      "capabilitiesOptions": {
+        "target_temperature.nighttemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Night"
+          },
+          "desc": {
+            "en": "Night"
+          },
+          "insights": false
+        },
+        "measure_temperature.nighttemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Night measure"
+          },
+          "desc": {
+            "en": "Night measure"
+          },
+          "insights": false,
+          "visible": false
+        },
+        "target_temperature.daytemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "Day"
+          },
+          "desc": {
+            "en": "Day"
+          },
+          "insights": false
+        },
+        "measure_temperature.daytemp": {
+          "maintenanceAction": true,
+          "title": {
+            "en": "day measure"
+          },
+          "desc": {
+            "en": "day measure"
+          },
+          "insights": false
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/thermostat/assets/images/small.png",
+        "large": "/drivers/thermostat/assets/images/large.png",
+        "xlarge": "/drivers/thermostat/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "pair",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "thermostat",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Server Settings",
+            "sv": "Serverinställningar"
+          },
+          "children": [
+            {
+              "id": "network_address",
+              "type": "text",
+              "label": {
+                "en": "Network Adddress",
+                "sv": "Network Adddress"
+              },
+              "value": "ems-esp.local"
+            },
+            {
+              "id": "access_token",
+              "type": "text",
+              "label": {
+                "en": "Access Token",
+                "sv": "Access Token"
+              },
+              "hint": {
+                "en": "Found in EMS-ESP web interface, under Security and Manage Users",
+                "sv": "Finns i EMS-ESP webb gränssnitt, under Säkerhet och Användare"
+              },
+              "value": ""
+            },
+            {
+              "id": "poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Poll intervall in ms",
+                "sv": "Poll intervall i ms"
+              },
+              "value": 5000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "boiler_curflowtemp": {
+      "type": "number",
+      "title": {
+        "en": "Flow temp",
+        "sv": "Framledningstemp",
+        "sk": "Prietokova teplota"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "boiler_heatingtemp": {
+      "type": "number",
+      "title": {
+        "en": "radiator temp",
+        "sk": "teplota radiatora"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "min": 0,
+      "max": 45,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "boiler_lastcode": {
+      "type": "string",
+      "title": {
+        "en": "Last Code",
+        "sv": "Senaste kod",
+        "sk": "Posledny kod"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": false,
+      "icon": "/assets/error.svg"
+    },
+    "boiler_outdoortemp": {
+      "type": "number",
+      "title": {
+        "en": "Outdoor temp",
+        "sk": "Vonkajsia teplota"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "boiler_pumpmode": {
+      "type": "string",
+      "title": {
+        "en": "Pump mode",
+        "sk": "mod pumpy"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "icon": "/assets/pump.svg"
+    },
+    "boiler_wwcirc": {
+      "type": "string",
+      "title": {
+        "en": "Circulate activate",
+        "sk": "Cirkulacacia aktivna"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "uiComponent": "sensor",
+      "icon": "/assets/pump.svg"
+    },
+    "boiler_wwcirc_change": {
+      "type": "boolean",
+      "title": {
+        "en": "Circulate activate",
+        "sk": "Cirkulacacia aktivna"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "insightsTitleTrue": "on",
+      "insightsTitleFalse": "off",
+      "titleTrue": "on",
+      "titleFalse": "off",
+      "capabilities": [
+        "onoff"
+      ],
+      "uiQuickAction": true,
+      "icon": "/assets/pump.svg"
+    },
+    "boiler_wwcircmode": {
+      "type": "string",
+      "title": {
+        "en": "Circulation mode",
+        "sk": "mod cirkulacie"
+      },
+      "getable": true,
+      "setable": true,
+      "insights": true,
+      "icon": "/assets/pump.svg"
+    },
+    "boiler_wwcurtemp": {
+      "type": "number",
+      "title": {
+        "en": "Tap water temp",
+        "sv": "Varmvatten temp",
+        "sk": "Teplota vody z vodovodu"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "boiler_wwcurtemp2": {
+      "type": "number",
+      "title": {
+        "en": "Tap water temp 2",
+        "sv": "Varmvatten temp 2",
+        "sk": "Teplota vody z vodovodu 2"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "boiler_wwseltemp": {
+      "type": "number",
+      "title": {
+        "en": "water temp",
+        "sk": "teplota vody"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "min": 40,
+      "max": 60,
+      "insights": true,
+      "icon": "/assets/thermometer.svg"
+    },
+    "thermostat_hc1_daytemp": {
+      "type": "number",
+      "title": {
+        "en": "day temp"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": false,
+      "icon": "/assets/thermometer.svg"
+    },
+    "thermostat_hc1_daytemp_change": {
+      "type": "enum",
+      "title": {
+        "en": "hc1 daytemp change"
+      },
+      "values": [
+        {
+          "id": "10",
+          "title": "10"
+        },
+        {
+          "id": "10.5",
+          "title": "10.5"
+        },
+        {
+          "id": "11",
+          "title": "11"
+        },
+        {
+          "id": "11.5",
+          "title": "11.5"
+        },
+        {
+          "id": "12",
+          "title": "12"
+        },
+        {
+          "id": "12.5",
+          "title": "12.5"
+        },
+        {
+          "id": "13",
+          "title": "13"
+        },
+        {
+          "id": "13.5",
+          "title": "13.5"
+        },
+        {
+          "id": "14",
+          "title": "14"
+        },
+        {
+          "id": "14.5",
+          "title": "14.5"
+        },
+        {
+          "id": "15",
+          "title": "15"
+        },
+        {
+          "id": "15.5",
+          "title": "15.5"
+        },
+        {
+          "id": "16",
+          "title": "16"
+        },
+        {
+          "id": "16.5",
+          "title": "16.5"
+        },
+        {
+          "id": "17",
+          "title": "17"
+        },
+        {
+          "id": "17.5",
+          "title": "17.5"
+        },
+        {
+          "id": "18",
+          "title": "18"
+        },
+        {
+          "id": "18.5",
+          "title": "18.5"
+        },
+        {
+          "id": "19",
+          "title": "19"
+        },
+        {
+          "id": "19.5",
+          "title": "19.5"
+        },
+        {
+          "id": "20",
+          "title": "20"
+        },
+        {
+          "id": "20.5",
+          "title": "20.5"
+        },
+        {
+          "id": "21",
+          "title": "21"
+        },
+        {
+          "id": "21.5",
+          "title": "21.5"
+        },
+        {
+          "id": "22",
+          "title": "22"
+        },
+        {
+          "id": "22.5",
+          "title": "22.5"
+        },
+        {
+          "id": "23",
+          "title": "23"
+        },
+        {
+          "id": "23.5",
+          "title": "23.5"
+        },
+        {
+          "id": "24",
+          "title": "24"
+        },
+        {
+          "id": "24.5",
+          "title": "24.5"
+        },
+        {
+          "id": "25",
+          "title": "25"
+        },
+        {
+          "id": "25.5",
+          "title": "25.5"
+        },
+        {
+          "id": "26",
+          "title": "26"
+        },
+        {
+          "id": "26.5",
+          "title": "26.5"
+        },
+        {
+          "id": "27",
+          "title": "27"
+        },
+        {
+          "id": "27.5",
+          "title": "27.5"
+        },
+        {
+          "id": "28",
+          "title": "28"
+        },
+        {
+          "id": "28.5",
+          "title": "28.5"
+        },
+        {
+          "id": "29",
+          "title": "29"
+        },
+        {
+          "id": "29.5",
+          "title": "29.5"
+        },
+        {
+          "id": "30",
+          "title": "30"
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "thermostat_hc1_mode": {
+      "type": "enum",
+      "title": {
+        "en": "hc1 mode"
+      },
+      "values": [
+        {
+          "id": "auto",
+          "title": "Auto",
+          "hint": "AUTO",
+          "desc": "AUto"
+        },
+        {
+          "id": "night",
+          "title": "Night"
+        },
+        {
+          "id": "day",
+          "title": "Day"
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "set": {
+        "method": "setHc1Mode"
+      }
+    },
+    "thermostat_hc1_nighttemp": {
+      "type": "number",
+      "title": {
+        "en": "night temp"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "insights": false,
+      "icon": "/assets/thermometer.svg"
+    },
+    "thermostat_hc1_nighttemp_change": {
+      "type": "enum",
+      "title": {
+        "en": "hc1 nighttemp change"
+      },
+      "values": [
+        {
+          "id": "10",
+          "title": "10"
+        },
+        {
+          "id": "10.5",
+          "title": "10.5"
+        },
+        {
+          "id": "11",
+          "title": "11"
+        },
+        {
+          "id": "11.5",
+          "title": "11.5"
+        },
+        {
+          "id": "12",
+          "title": "12"
+        },
+        {
+          "id": "12.5",
+          "title": "12.5"
+        },
+        {
+          "id": "13",
+          "title": "13"
+        },
+        {
+          "id": "13.5",
+          "title": "13.5"
+        },
+        {
+          "id": "14",
+          "title": "14"
+        },
+        {
+          "id": "14.5",
+          "title": "14.5"
+        },
+        {
+          "id": "15",
+          "title": "15"
+        },
+        {
+          "id": "15.5",
+          "title": "15.5"
+        },
+        {
+          "id": "16",
+          "title": "16"
+        },
+        {
+          "id": "16.5",
+          "title": "16.5"
+        },
+        {
+          "id": "17",
+          "title": "17"
+        },
+        {
+          "id": "17.5",
+          "title": "17.5"
+        },
+        {
+          "id": "18",
+          "title": "18"
+        },
+        {
+          "id": "18.5",
+          "title": "18.5"
+        },
+        {
+          "id": "19",
+          "title": "19"
+        },
+        {
+          "id": "19.5",
+          "title": "19.5"
+        },
+        {
+          "id": "20",
+          "title": "20"
+        },
+        {
+          "id": "20.5",
+          "title": "20.5"
+        },
+        {
+          "id": "21",
+          "title": "21"
+        },
+        {
+          "id": "21.5",
+          "title": "21.5"
+        },
+        {
+          "id": "22",
+          "title": "22"
+        },
+        {
+          "id": "22.5",
+          "title": "22.5"
+        },
+        {
+          "id": "23",
+          "title": "23"
+        },
+        {
+          "id": "23.5",
+          "title": "23.5"
+        },
+        {
+          "id": "24",
+          "title": "24"
+        },
+        {
+          "id": "24.5",
+          "title": "24.5"
+        },
+        {
+          "id": "25",
+          "title": "25"
+        },
+        {
+          "id": "25.5",
+          "title": "25.5"
+        },
+        {
+          "id": "26",
+          "title": "26"
+        },
+        {
+          "id": "26.5",
+          "title": "26.5"
+        },
+        {
+          "id": "27",
+          "title": "27"
+        },
+        {
+          "id": "27.5",
+          "title": "27.5"
+        },
+        {
+          "id": "28",
+          "title": "28"
+        },
+        {
+          "id": "28.5",
+          "title": "28.5"
+        },
+        {
+          "id": "29",
+          "title": "29"
+        },
+        {
+          "id": "29.5",
+          "title": "29.5"
+        },
+        {
+          "id": "30",
+          "title": "30"
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "thermostat_hc1_program": {
+      "type": "enum",
+      "title": {
+        "en": "hc1 program"
+      },
+      "values": [
+        {
+          "id": "family",
+          "title": {
+            "en": "family po-st 5:30-22:00 pi 5:30-23:00 so 6:30-23:30 ne 7:00-22:00"
+          },
+          "hint": {
+            "en": "family po-st 5:30-22:00 pi 5:30-23:00 so 6:30-23:30 ne 7:00-22:00"
+          }
+        },
+        {
+          "id": "morning",
+          "title": {
+            "en": "morning po-st 4:30-22:00 pi 4:30-23:00 so 6:30-23:30 ne 7:00-22:00"
+          },
+          "hint": {
+            "en": "morning po-st 4:30-22:00 pi 4:30-23:00 so 6:30-23:30 ne 7:00-22:00"
+          }
+        },
+        {
+          "id": "evening",
+          "title": {
+            "en": "evening po-pi 6:30-23:00 so 6:30-23:30 ne 7:00-23:00"
+          },
+          "hint": {
+            "en": "evening po-pi 6:30-23:00 so 6:30-23:30 ne 7:00-23:00"
+          }
+        },
+        {
+          "id": "am",
+          "title": {
+            "en": "am po-st 5:30-8:30/12:00-22:00 pi 5:30-8:30/12:00-23:00 so 6:30-23:30 ne 7:00-22:00"
+          },
+          "hint": {
+            "en": "am po-st 5:30-8:30/12:00-22:00 pi 5:30-8:30/12:00-23:00 so 6:30-23:30 ne 7:00-22:00"
+          }
+        },
+        {
+          "id": "pm",
+          "title": {
+            "en": "pm po-st 6:00-11:30/16:00-22:00 pi 6:00-11:30/15:00-23:00 so 6:30-23:30 ne 7:00-22:00"
+          },
+          "hint": {
+            "en": "pm po-st 6:00-11:30/16:00-22:00 pi 6:00-11:30/15:00-23:00 so 6:30-23:30 ne 7:00-22:00"
+          }
+        },
+        {
+          "id": "midday",
+          "title": {
+            "en": "midday po-st 6:00-8:00/11:30-13:00/17:00-22:00 pi 6:00-8:00/11:30-23:00 so 6:00-23:00 ne 7:00-22:00"
+          },
+          "hint": {
+            "en": "midday po-st 6:00-8:00/11:30-13:00/17:00-22:00 pi 6:00-8:00/11:30-23:00 so 6:00-23:00 ne 7:00-22:00"
+          }
+        },
+        {
+          "id": "singles",
+          "title": {
+            "en": "singles po-st 6:00-8:00/16:00-22:00 pi 6:00-8:00/15:00-23:00 so 7:00-23:30 ne 08:00-22:00"
+          },
+          "hint": {
+            "en": "singles po-st 6:00-8:00/16:00-22:00 pi 6:00-8:00/15:00-23:00 so 7:00-23:30 ne 08:00-22:00"
+          }
+        },
+        {
+          "id": "seniors",
+          "title": {
+            "en": "seniors po-ne 5:30-22:00"
+          },
+          "hint": "po-NE 5:30-22:00",
+          "desc": "PO-ne 5:30-22:00"
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    }
+  }
+}

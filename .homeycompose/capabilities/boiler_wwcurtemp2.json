@@ -1,0 +1,14 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Tap water temp 2",
+    "sv": "Varmvatten temp 2",
+    "sk": "Teplota vody z vodovodu 2"
+  },
+  "getable": true,
+  "setable": false,
+  "units": { "en": "°C" },
+  "decimals": 1,
+  "insights": true,
+  "icon": "/assets/thermometer.svg"
+}
